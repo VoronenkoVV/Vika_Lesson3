@@ -3,25 +3,25 @@ package com.company.Classes;
 import java.io.Serializable;
 
 public class Wind  implements Serializable {
-    public Wind(Double speed, Integer deg) {
+    public Wind(Long speed, Long deg) {
         this.speed = speed;
         this.deg = deg;
     }
 
-    private Double speed;
-    private Integer deg;
+    private Long speed;
+    private Long deg;
 
-    public Double getSpeed() {
+    public Long getSpeed() {
         return speed;
     }
-    public void setSpeed(Double speed) {
+    public void setSpeed(Long speed) {
         this.speed = speed;
     }
 
-    public Integer getDeg() {
+    public Long getDeg() {
         return deg;
     }
-    public void setDeg(Integer deg) {
+    public void setDeg(Long deg) {
         this.deg = deg;
     }
 

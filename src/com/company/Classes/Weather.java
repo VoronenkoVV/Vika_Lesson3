@@ -1,17 +1,11 @@
 package com.company.Classes;
 
-import com.company.Classes.Clouds;
-import com.company.Classes.Coord;
-import com.company.Classes.MainWeather;
-import com.company.Classes.Wind;
-
 import java.io.Serializable;
 import java.time.Instant;
-import java.util.Calendar;
 import java.util.Date;
 
 public class Weather implements Serializable {
-    public Weather(MainWeather main, Coord coord, Integer visibility, Wind wind, Clouds clouds, Integer dt, String name) {
+    public Weather(MainWeather main, Coord coord, Long visibility, Wind wind, Clouds clouds, Long dt, String name) {
         this.main = main;
         this.coord = coord;
         this.visibility = visibility;
@@ -26,10 +20,10 @@ public class Weather implements Serializable {
 
     private MainWeather main;
     private Coord coord;
-    private Integer visibility;
+    private Long visibility;
     private Wind wind;
     private Clouds clouds;
-    private Integer dt;
+    private Long dt;
     private String name;
 
     public Coord getCoord() {
@@ -48,11 +42,11 @@ public class Weather implements Serializable {
         this.main = main;
     }
 
-    public Integer getVisibility() {
+    public Long getVisibility() {
         return visibility;
     }
 
-    public void setVisibility(Integer visibility) {
+    public void setVisibility(Long visibility) {
         this.visibility = visibility;
     }
 
@@ -72,11 +66,11 @@ public class Weather implements Serializable {
         this.clouds = clouds;
     }
 
-    public Integer getDt() {
+    public Long getDt() {
         return dt;
     }
 
-    public void setDt(Integer dt) {
+    public void setDt(Long dt) {
         this.dt = dt;
     }
 

@@ -5,13 +5,13 @@ import java.io.Serializable;
 public class MainWeather implements Serializable {
 
     private Double temp;
-    private Integer pressure;
+    private Long pressure;
 
-    public MainWeather(Double temp, Integer pressure) {
+    public MainWeather(Double temp, Long pressure) {
         this.temp = temp;
         this.pressure = pressure;
     }
-//    private Integer humidity;
+//    private Long humidity;
 
     public Double getTemp() {
         return temp;
@@ -20,23 +20,23 @@ public class MainWeather implements Serializable {
         this.temp = temp;
     }
 
-    public Integer getPressure() {
+    public Long getPressure() {
         return pressure;
     }
-    public void setPressure(Integer pressure) {
+    public void setPressure(Long pressure) {
         this.pressure = pressure;
     }
 
-/*    public Integer getHumidity() {
+/*    public Long getHumidity() {
         return humidity;
     }
-    public void setHumidity(Integer humidity) {
+    public void setHumidity(Long humidity) {
         this.humidity = humidity;
     }*/
 
     @Override
     public String toString() {
-        return "Weather: " + (temp-273) + "°C, pressure: " + pressure;
+        return "Weather: " + String.format("value is %5.1f",temp-273) + "°C, pressure: " + pressure;
     }
 
 }
